@@ -1,15 +1,13 @@
 <template>
-<div>hi</div>
-<frank />
+  <div>
+    hi|<router-link to="/">frank</router-link>|
+    <router-link to="/xxx">frank2</router-link>
+  </div>
+  <router-view />
 </template>
 
 <script>
-import frank from "./components/frank.vue";
-
 export default {
-    name: "App",
-    components: {
-        frank,
-    },
-};
+  name: 'App',
+}
 </script>
