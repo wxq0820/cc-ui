@@ -40,7 +40,7 @@ export default {
 .content {
   height: 100%;
   > aside {
-    height: 100%;
+    height: calc(100% - 61px);
     background-color: lightblue;
     width: 150px;
     margin-top: 5px;
