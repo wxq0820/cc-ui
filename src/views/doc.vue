@@ -68,7 +68,7 @@ export default {
     margin: 5px 0 0 160px;
     padding: 15px 20px;
     overflow-y: scroll;
-    background-color: lightgreen;
+    background-color: white;
 
     @media (max-width: 500px) {
       margin-left: 0;
