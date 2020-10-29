@@ -56,9 +56,11 @@ export default {
     }
     @media (max-width: 500px) {
       position: fixed;
+      z-index: 1;
       top: 0px;
       left: 0;
       padding-top: 70px;
+      height: 100%;
     }
   }
   > main {
