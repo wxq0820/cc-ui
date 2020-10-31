@@ -1,6 +1,19 @@
 <template>
   <ButtonDemo @click="toggle">toggle</ButtonDemo>
-  <DialogDemo :cancel="f2" :ok="f1" v-model:visible="visible" :closeOnClickOverlay="false"></DialogDemo>
+  <DialogDemo
+    :ok="f1"
+    :cancel="f2"
+    v-model:visible="visible"
+    :closeOnClickOverlay="false"
+  >
+    <template v-slot:title>
+      <strong>标题</strong>
+    </template>
+    <template v-slot:content>
+      <h1>你好</h1>
+      <p>hello</p>
+    </template>
+  </DialogDemo>
 </template>
 <script lang="ts">
 import DialogDemo from '../lib/dialogDemo.vue'
@@ -13,9 +26,11 @@ export default {
     const toggle = () => {
       visible.value = !visible.value
     }
-    const f1 = ()=>{ return false }
-    const f2 = ()=>{}
+    const f1 = () => {
+      return false
+    }
+    const f2 = () => {}
     return { visible, toggle, f1, f2 }
-  }
+  },
 }
 </script>

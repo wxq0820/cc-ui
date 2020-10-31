@@ -1,22 +1,23 @@
 <template>
   <template v-if="visible">
-    <div class="gugu-dialog-overlay" @click="onClickOverlay"></div>
-    <div class="gugu-dialog-wrapper">
-      <div class="gugu-dialog">
-        <header>
-          标题
-          <span @click="close" class="gugu-dialog-close"></span>
-        </header>
-        <main>
-          <p>第一行</p>
-          <p>第二行</p>
-        </main>
-        <footer>
-          <ButtonDemo @click="onClickCancel">取消</ButtonDemo>
-          <ButtonDemo @click="onClickOk" level="main">确认</ButtonDemo>
-        </footer>
+    <Teleport to="body">
+      <div class="gugu-dialog-overlay" @click="onClickOverlay"></div>
+      <div class="gugu-dialog-wrapper">
+        <div class="gugu-dialog">
+          <header>
+            <slot name="title" />
+            <span @click="close" class="gugu-dialog-close"></span>
+          </header>
+          <main>
+            <slot name="content" />
+          </main>
+          <footer>
+            <ButtonDemo @click="onClickCancel">取消</ButtonDemo>
+            <ButtonDemo @click="onClickOk" level="main">确认</ButtonDemo>
+          </footer>
+        </div>
       </div>
-    </div>
+    </Teleport>
   </template>
 </template>
 <script lang="ts">
