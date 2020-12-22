@@ -15,9 +15,9 @@ export default {
     TabsDemo,
     TabDemo,
   },
-  setup(){
-      const s = ref('title1')
-      return{ s }
-  }
+  setup() {
+    const s = ref('title1')
+    return { s }
+  },
 }
 </script>

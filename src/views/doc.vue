@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <Topnav />
+  <div class="layout">
+    <Topnav toggleMenuButtonVisible class="nav"/>
     <div class="content">
       <aside v-if="asideVisible">
         <h2>組件列表</h2>
@@ -43,7 +43,6 @@ export default {
     height: calc(100% - 61px);
     background-color: lightblue;
     width: 150px;
-    margin-top: 5px;
     padding: 16px;
     position: absolute;
     > h2 {
