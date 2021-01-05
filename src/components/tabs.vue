@@ -1,23 +1,14 @@
 <template>
   <div>Tabs示例</div>
-  <h1>Demo1</h1>
-  <TabsDemo v-model:selected="s">
-    <TabDemo title="title1">内容1</TabDemo>
-    <TabDemo title="title22222">内容2</TabDemo>
-  </TabsDemo>
+  <Demo :component="TabsDemo1"/>
 </template>
 <script lang="ts">
-import TabsDemo from '../lib/tabsDemo.vue'
-import TabDemo from '../lib/tabDemo.vue'
-import { ref } from 'vue'
+import Demo from './demo.vue'
+import TabsDemo1 from './tabs1.demo.vue'
 export default {
-  components: {
-    TabsDemo,
-    TabDemo,
-  },
+  component: {Demo},
   setup() {
-    const s = ref('title1')
-    return { s }
-  },
+    return {Demo,TabsDemo1}
+  }
 }
 </script>

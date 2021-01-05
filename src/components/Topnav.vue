@@ -5,10 +5,14 @@
         <use xlink:href="#icon-chengzi"></use>
       </svg>
     </router-link>
-    <router-link to="/doc" class="menu">
+    <router-link to="/doc/intro" class="menu">
       <div>文档</div>
     </router-link>
-    <svg v-if="toggleMenuButtonVisible" class="icon toggleAside" @click="toggleMenu">
+    <svg
+      v-if="toggleMenuButtonVisible"
+      class="icon toggleAside"
+      @click="toggleMenu"
+    >
       <use xlink:href="#icon-menu1"></use>
     </svg>
   </div>
@@ -45,6 +49,9 @@ $color: #28d1c9;
     left: 16px;
     top: 50%;
     transform: translateY(-50%);
+    > use {
+      user-select: none;
+    }
   }
   @media (max-width: 500px) {
     > .menu {
@@ -66,8 +73,8 @@ export default {
   props: {
     toggleMenuButtonVisible: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   setup() {
     const asideVisible = inject<Ref<boolean>>('asideVisible')

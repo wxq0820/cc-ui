@@ -1,56 +1,32 @@
 <template>
-    <div>
-    button示例
-    </div>
-    <h1>Demo1</h1>
-    <ButtonDemo @click="onClick">你好</ButtonDemo>
-    <ButtonDemo theme="button" @click="onClick">你好</ButtonDemo>
-    <ButtonDemo theme="link" @click="onClick">你好</ButtonDemo>
-    <ButtonDemo theme="text" @click="onClick">你好</ButtonDemo>
-    <h1>Demo2</h1>
-    <ButtonDemo size="big" @click="onClick">你好</ButtonDemo>
-    <ButtonDemo @click="onClick">你好</ButtonDemo>
-    <ButtonDemo size="small" @click="onClick">你好</ButtonDemo>
-    <br/>
-    <ButtonDemo theme="link" size="big" @click="onClick">你好</ButtonDemo>
-    <ButtonDemo theme="link" @click="onClick">你好</ButtonDemo>
-    <ButtonDemo theme="link" size="small" @click="onClick">你好</ButtonDemo>
-    <br/>
-    <ButtonDemo theme="text" size="big" @click="onClick">你好</ButtonDemo>
-    <ButtonDemo theme="text" @click="onClick">你好</ButtonDemo>
-    <ButtonDemo theme="text" size="small" @click="onClick">你好</ButtonDemo>
-    <h1>Demo3</h1>
-    <ButtonDemo level="main" @click="onClick">你好</ButtonDemo>
-    <ButtonDemo @click="onClick">你好</ButtonDemo>
-    <ButtonDemo level="danger" @click="onClick">你好</ButtonDemo>
-    <br/>
-    <ButtonDemo theme="link" level="main" @click="onClick">你好</ButtonDemo>
-    <ButtonDemo theme="link" @click="onClick">你好</ButtonDemo>
-    <ButtonDemo theme="link" level="danger" @click="onClick">你好</ButtonDemo>
-    <br/>
-    <ButtonDemo theme="text" level="main" @click="onClick">你好</ButtonDemo>
-    <ButtonDemo theme="text" @click="onClick">你好</ButtonDemo>
-    <ButtonDemo theme="text" level="danger" @click="onClick">你好</ButtonDemo>
-    <h1>Demo4</h1>
-    <ButtonDemo @click="onClick" loading>你好</ButtonDemo>
-    <ButtonDemo @click="onClick">你好</ButtonDemo>
-    <h1>Demo5</h1>
-    <ButtonDemo @click="onClick" disabled>你好</ButtonDemo>
-    <ButtonDemo @click="onClick" theme="link" disabled>你好</ButtonDemo>
-    <ButtonDemo @click="onClick" theme="text" disabled>你好</ButtonDemo>
-   
-
+  <h1>button组件示例</h1>
+  <Demo :component="Button1Demo" />
+  <Demo :component="Button2Demo" />
+  <Demo :component="Button3Demo" />
+  <Demo :component="Button4Demo" />
+  <Demo :component="Button5Demo" />
 </template>
 
-<script lang='ts'>
-import ButtonDemo from '../lib/buttonDemo.vue'
+<script lang="ts">
+import Button1Demo from './button1.demo.vue'
+import Button2Demo from './button2.demo.vue'
+import Button3Demo from './button3.demo.vue'
+import Button4Demo from './button4.demo.vue'
+import Button5Demo from './button5.demo.vue'
+import Demo from './demo.vue'
 export default {
-    components: {ButtonDemo},
-    setup() {
-        const onClick = ()=>{
-            console.log('hello')
-        }
-        return {onClick}
+  components: {
+    Demo
+  },
+  setup() {
+    return {
+      Demo,
+      Button1Demo,
+      Button2Demo,
+      Button3Demo,
+      Button4Demo,
+      Button5Demo,
     }
+  }
 }
 </script>
