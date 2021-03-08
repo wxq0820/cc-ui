@@ -4,9 +4,9 @@
       <Topnav />
       <div class="banner">
         <h1>咕咕UI</h1>
-        <h2>一个厉害的UI 框架</h2>
+        <h2>一个基于 Vue 3的UI 框架</h2>
         <p class="actions">
-          <a href="">Github</a>
+          <a href="https://github.com/wxq0820/cc-ui">Github</a>
           <router-link to="/doc/intro">开始</router-link>
         </p>
       </div>
@@ -39,15 +39,12 @@
   </div>
 </template>
 <style lang="scss" scoped>
-$green: #02bcb0;
+$orange: #e8a143;
 $border-radius: 4px;
-$color: #28d1c9;
+$color: #fff;
 .topnavAndBanner {
-  background: linear-gradient(
-    145deg,
-    rgba(227, 255, 253, 1) 0%,
-    rgba(183, 233, 230, 1) 100%
-  );
+  
+background: linear-gradient(135deg, rgba(40,209,201,1) 0%, rgba(248,220,160,1) 100%);
   clip-path: ellipse(80% 60% at 50% 40%);
 }
 .features {
@@ -109,7 +106,7 @@ $color: #28d1c9;
     padding: 8px 0;
     a {
       margin: 0 8px;
-      background-color: $green;
+      background-color: $orange;
       color: white;
       display: inline-block;
       padding: 8px 24px;

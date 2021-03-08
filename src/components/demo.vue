@@ -42,7 +42,7 @@ $border-color: #d9d9d9;
 }
 </style>
 <script lang="ts">
-import ButtonDemo from '../lib/ButtonDemo.vue'
+import {ButtonDemo} from '../lib/index'
 import 'prismjs'
 import 'prismjs/themes/prism.css'
 import { computed, ref } from 'vue'

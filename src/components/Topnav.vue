@@ -18,7 +18,7 @@
   </div>
 </template>
 <style lang="scss" scoped>
-$color: #28d1c9;
+$color: #ea8c11;
 .topnav {
   color: $color;
   position: relative;

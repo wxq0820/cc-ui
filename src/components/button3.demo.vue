@@ -16,7 +16,7 @@
 </template>
 
 <script lang="ts">
-import ButtonDemo from '../lib/buttonDemo.vue'
+import {ButtonDemo} from '../lib/index'
 export default {
   components: { ButtonDemo },
   setup() {

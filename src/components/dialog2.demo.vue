@@ -5,8 +5,7 @@
   <ButtonDemo @click="show">showDialog</ButtonDemo>
 </template>
 <script lang="ts">
-import ButtonDemo from '../lib/buttonDemo.vue'
-import {openDialog} from '../lib/openDialog'
+import {openDialog, ButtonDemo} from '../lib/index'
 export default {
   components: { ButtonDemo },
   setup() {
